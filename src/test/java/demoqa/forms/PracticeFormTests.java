@@ -38,8 +38,10 @@ public class PracticeFormTests extends TestBase {
     @Test
     @Parameters({"firstName", "lastName", "email", "phone"})
     public void practiceFormParametersTest(String firstName, String lastName, String email, String phone) {
+        String newName = "fgghj";//esli nado dobavit randomno imja
+          //System.currentTimeMillis() = esli nado dobavit randomno email
         new PracticeFormPage(app.driver)
-                .enterPersonalData(firstName,lastName, email, phone )
+                .enterPersonalData(firstName+newName,lastName, System.currentTimeMillis()+email, phone )
                 .selectGender("Female")
                 .chooseDateAsString("21 October 1968")
                 //.chooseDate("21", "October", "1968")

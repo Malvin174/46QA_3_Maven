@@ -5,7 +5,7 @@ package demoqa.utils;
 import org.testng.IRetryAnalyzer;
 import org.testng.ITestResult;
 
-public class RetryAnalyzer implements IRetryAnalyzer {
+public class RetryAnalyser implements IRetryAnalyzer {
 
     private int retryCount = 0;
     private static final int maxRetryCount = 2;

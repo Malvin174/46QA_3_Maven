@@ -4,7 +4,7 @@ import demoqa.core.TestBase;
 import demoqa.pages.HomePage;
 import demoqa.pages.LoginPage;
 import demoqa.pages.SidePage;
-import demoqa.utils.RetryAnalyzer;
+import demoqa.utils.RetryAnalyser;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -20,7 +20,7 @@ public class LoginTests extends TestBase {
     }
 
     //@Test(invocationCount = 1)
-    @Test(retryAnalyzer = RetryAnalyzer.class)
+    @Test(retryAnalyzer = RetryAnalyser.class)
     public void loginPositiveTest() {
         new LoginPage(app.driver)
                 .enterPersonalData("Malvin174","12345Qwer!")
